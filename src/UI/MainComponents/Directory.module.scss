@@ -1,0 +1,40 @@
+.section{
+  height:  calc(100vh - 140px);
+    overflow: auto;
+    @media (max-width:600px){
+      height:  calc(100vh - 90px);
+    }
+}
+
+.section::-webkit-scrollbar {
+  width: 7px; /* ширина для вертикального скролла */
+   /* высота для горизонтального скролла */
+  background-color: #F9F9F9;
+
+}
+.section::-webkit-scrollbar-thumb{
+  background-color: #acc3f5; /* ползунок скроллбара  */
+  border-radius: 2px;
+  border-radius: 1px;    
+  height: 149px;    
+}
+
+.section::-webkit-scrollbar-thumb:hover { /* ползунок скроллбара при наведенні  */
+  background-color: #88abf7
+}
+.section::-webkit-scrollbar-button:vertical:start:decrement { /* стрелки */
+  background-color: transparent;  
+
+}
+
+.section::-webkit-scrollbar-button:vertical:end:increment {   /* стрелки */
+  background-color: transparent;  
+
+}
+
+.section::-webkit-scrollbar-button:horizontal:start:decrement { /* стрелки */
+  background-color: transparent;  
+}
+.section::-webkit-scrollbar-button:horizontal:end:increment { /* стрелки */
+  background-color: transparent;  
+}

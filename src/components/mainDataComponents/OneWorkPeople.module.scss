@@ -1,0 +1,11 @@
+.block{
+  display:grid;
+  grid-template-columns: minmax(100px, 1fr)  minmax(100px, 1fr) minmax(100px, 1fr);
+  gap: 5px;
+  padding: 10px 10px;
+  background-color: rgba(142, 142, 255, 0.074);
+  line-height: 1.2;
+  @media (max-width:800px){
+      font-size: 14px;
+  }
+}

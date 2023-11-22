@@ -1,0 +1,31 @@
+.block{
+  display: flex;
+  background-color: rgba(142, 142, 255, 0.074);
+  border-radius: 5px;
+  gap: 20px;
+  .picture{
+    flex: 0 0 150px;
+    width: 200px;
+    height: 120px;
+    overflow: hidden;
+    border-radius: 5px;
+    @media (max-width:600px){
+      flex: 0 0 150px;
+    width: 100px;
+    height: 90px;
+    }
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .text{
+    padding: 20px 5px;
+    .title{
+      @media (max-width:600px){
+       font-size: 14px;
+      }
+    }
+  }
+}

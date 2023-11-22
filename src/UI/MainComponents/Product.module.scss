@@ -1,0 +1,82 @@
+.section{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  .buttin-block{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    column-gap: 20px;
+    row-gap: 10px;
+    @media (max-width:600px){
+      justify-content: center;
+    }
+   
+    button{
+      background-color: rgb(217, 217, 217);
+      padding: 7px 10px;
+      border-radius: 5px;
+      min-width: 200px;
+      transition: box-shadow 0.3s ease 0s, background-color 0.3s ease 0s, color 0.3s ease 0s;
+        &:hover{
+          box-shadow: inset 0px 2px 6px rgb(217, 217, 217);
+        }
+        @media (max-width:600px){
+          min-width: 130px;
+          font-size: 14px;
+          padding: 7px 5px;
+        }
+    }
+    .button-active{
+      background-color: #acc3f5;
+      box-shadow: inset 0px 2px 6px rgb(217, 217, 217);
+    }
+  }
+  .bloks{
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    gap: 10px;
+    height:  calc(100vh - 200px);
+    overflow: auto;
+    @media (max-width:600px){
+      height:  calc(100vh - 90px);
+    }
+  }
+}
+
+
+// Scrol-bar
+
+.bloks::-webkit-scrollbar {
+  width: 7px; /* ширина для вертикального скролла */
+   /* высота для горизонтального скролла */
+  background-color: #F9F9F9;
+
+}
+.bloks::-webkit-scrollbar-thumb{
+  background-color: #acc3f5; /* ползунок скроллбара  */
+  border-radius: 2px;
+  border-radius: 1px;    
+  height: 149px;    
+}
+
+.bloks::-webkit-scrollbar-thumb:hover { /* ползунок скроллбара при наведенні  */
+  background-color: #88abf7
+}
+.bloks::-webkit-scrollbar-button:vertical:start:decrement { /* стрелки */
+  background-color: transparent;  
+
+}
+
+.bloks::-webkit-scrollbar-button:vertical:end:increment {   /* стрелки */
+  background-color: transparent;  
+
+}
+
+.bloks::-webkit-scrollbar-button:horizontal:start:decrement { /* стрелки */
+  background-color: transparent;  
+}
+.bloks::-webkit-scrollbar-button:horizontal:end:increment { /* стрелки */
+  background-color: transparent;  
+}

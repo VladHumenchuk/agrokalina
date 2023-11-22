@@ -1,0 +1,85 @@
+.section{
+  display: grid;
+  grid-template-columns: minmax(95px, 150px) 1fr;
+  gap: 7px;
+  border: 1px solid;
+  border-radius: 5px;
+  min-height: calc(100vh - 150px);
+  @media (max-width:600px){
+    grid-template-columns: minmax(95px, 110px) 1fr;
+    font-size: 14px;
+  }
+  .menu{
+    background-color: rgba(136, 136, 149, 0.355);
+    height: 100%;
+    overflow: auto;
+    .list{
+      display: flex;
+      flex-direction: column;
+
+      .li{
+        padding: 7px 10px;
+        border-bottom: 1px solid rgba(93, 93, 167, 0.377);
+        cursor: pointer;
+        transition: background-color 0.1s ease 0s;
+        font-weight: 600;
+        color: rgb(65, 64, 64);
+          &:hover{
+            background-color: rgba(93, 93, 167, 0.2);
+          }
+        
+      }
+    }
+
+  }
+  .active-block{
+    
+  }
+}
+.active{
+  background-color: rgba(93, 93, 167, 0.377);
+}
+
+
+
+
+
+
+
+
+
+
+
+//scroll-bar
+.list::-webkit-scrollbar {
+  width: 7px; /* ширина для вертикального скролла */
+   /* высота для горизонтального скролла */
+  background-color: #F9F9F9;
+
+}
+.list::-webkit-scrollbar-thumb{
+  background-color: #acc3f5; /* ползунок скроллбара  */
+  border-radius: 2px;
+  border-radius: 1px;    
+  height: 149px;    
+}
+
+.list::-webkit-scrollbar-thumb:hover { /* ползунок скроллбара при наведенні  */
+  background-color: #88abf7
+}
+.list::-webkit-scrollbar-button:vertical:start:decrement { /* стрелки */
+  background-color: transparent;  
+
+}
+
+.list::-webkit-scrollbar-button:vertical:end:increment {   /* стрелки */
+  background-color: transparent;  
+
+}
+
+.list::-webkit-scrollbar-button:horizontal:start:decrement { /* стрелки */
+  background-color: transparent;  
+}
+.list::-webkit-scrollbar-button:horizontal:end:increment { /* стрелки */
+  background-color: transparent;  
+}

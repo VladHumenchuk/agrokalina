@@ -1,0 +1,47 @@
+.block{
+  .accordion{
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.3s;
+    border-radius: 1px;
+  }
+  .panel{
+    padding: 0 18px;
+    background-color: white;
+    transition: max-height 0.5s ease-out;
+    line-height: 1.4;
+    overflow: hidden;
+  }
+  .panel-hiden{
+    max-height: 0;
+    
+  }
+  .panel-active{
+    max-height: 280px;
+    @media (max-width:700px){
+      max-height: auto;
+    }
+  }
+}
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+
+.accordion:after {
+  content: '\02795'; 
+  font-size: 13px;
+  color: #86d9f5;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2796"; 
+}
